@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Background Paper Texture (Simplified) -->
+    <path
+        android:fillColor="#F0F0F0"
+        android:pathData="M10,10h88v88h-88z" />
+
+    <!-- Calendar Body -->
+    <path
+        android:fillColor="#000000"
+        android:pathData="M25,25h50v50h-50zM28,32h44v40h-44z" />
+    <path
+        android:fillColor="#000000"
+        android:pathData="M30,22h4v6h-4zM66,22h4v6h-4zM25,30h50v2h-50z" />
+
+    <!-- Grid Dots -->
+    <path android:fillColor="#333333" android:pathData="M33,38h6v6h-6zM47,38h6v6h-6z" />
+    <path android:fillColor="#333333" android:pathData="M33,50h6v6h-6zM47,50h6v6h-6z" />
+    <path android:fillColor="#333333" android:pathData="M33,62h6v6h-6zM47,62h6v6h-6zM61,62h6v6h-6z" />
+
+    <!-- Success Check -->
+    <path android:fillColor="#39FF14" android:pathData="M61,38h8v8h-8z" />
+    <path android:fillColor="#000000" android:pathData="M63,42l2,2l3,-3l1,1l-4,4l-3,-3z" />
+
+    <!-- Error Cross -->
+    <path android:fillColor="#FF3131" android:pathData="M61,50h8v8h-8z" />
+    <path android:fillColor="#000000" android:pathData="M63,52l1,-1l1,1l1,-1l1,1l-1,1l1,1l-1,1l-1,-1l-1,1l-1,-1l1,-1z" />
+
+    <!-- Person Icon Circle -->
+    <path
+        android:fillColor="#000000"
+        android:pathData="M65,65a15,15 0,1 0,30 0a15,15 0,1 0,-30 0" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M80,68a4,4 0,1 0,0 -8a4,4 0,1 0,0 8zM80,70c-3,0 -6,1.5 -6,4.5v1.5h12v-1.5c0,-3 -3,-4.5 -6,-4.5z" />
+
+    <!-- Text Base Lines -->
+    <path
+        android:fillColor="#000000"
+        android:pathData="M25,82h58v3h-58zM25,92h58v1h-58z" />
+
+</vector>

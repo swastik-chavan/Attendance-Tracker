@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Brutalist Core Palette -->
+    <color name="bg_white">#FFFFFF</color>
+    <color name="bg_off_white">#FAFAFA</color>
+    <color name="text_black">#1A1A1A</color>
+    <color name="border_black">#000000</color>
+    <color name="border_grey">#E0E0E0</color>
+
+    <!-- Neon Accent Colors -->
+    <color name="neon_green">#39FF14</color>
+    <color name="electric_blue">#2E5BFF</color>
+    <color name="neon_orange">#FF5F1F</color>
+    <color name="bright_yellow">#FFF01F</color>
+    <color name="hot_pink">#FF69B4</color>
+
+    <!-- Functional Colors (Using Neon Accents) -->
+    <color name="brutalist_present">@color/neon_green</color>
+    <color name="brutalist_absent">@color/neon_orange</color>
+    <color name="brutalist_late">@color/bright_yellow</color>
+    <color name="brutalist_accent">@color/electric_blue</color>
+
+    <!-- Brutalist Subject Palette (Bold & Sharp) -->
+    <color name="brutalist_blue">@color/electric_blue</color>
+    <color name="brutalist_green">@color/neon_green</color>
+    <color name="brutalist_yellow">@color/bright_yellow</color>
+    <color name="brutalist_red">#FF3131</color>
+    <color name="brutalist_purple">#BC13FE</color>
+    <color name="brutalist_orange">@color/neon_orange</color>
+    <color name="brutalist_teal">#00FFFF</color>
+    <color name="brutalist_pink">@color/hot_pink</color>
+
+    <!-- Legacy color references for Subject Palette -->
+    <color name="pastel_blue">@color/brutalist_blue</color>
+    <color name="pastel_green">@color/brutalist_green</color>
+    <color name="pastel_yellow">@color/brutalist_yellow</color>
+    <color name="pastel_red">@color/brutalist_red</color>
+    <color name="pastel_purple">@color/brutalist_purple</color>
+    <color name="pastel_orange">@color/brutalist_orange</color>
+    <color name="pastel_teal">@color/brutalist_teal</color>
+    <color name="pastel_pink">@color/brutalist_pink</color>
+
+    <color name="pastel_blue_dark">@color/brutalist_blue</color>
+    <color name="pastel_green_dark">@color/brutalist_green</color>
+    <color name="pastel_yellow_dark">@color/brutalist_yellow</color>
+    <color name="pastel_red_dark">@color/brutalist_red</color>
+    <color name="pastel_purple_dark">@color/brutalist_purple</color>
+    <color name="pastel_orange_dark">@color/brutalist_orange</color>
+    <color name="pastel_teal_dark">@color/brutalist_teal</color>
+    <color name="pastel_pink_dark">@color/brutalist_pink</color>
+
+    <!-- Theme Overrides for Light Mode -->
+    <color name="primary">#000000</color>
+    <color name="on_primary">#FFFFFF</color>
+    <color name="primary_container">#FFFFFF</color>
+    <color name="background">@color/bg_off_white</color>
+    <color name="surface">@color/bg_white</color>
+    <color name="on_surface">@color/text_black</color>
+    <color name="outline">@color/border_black</color>
+
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+
+    <!-- UI Scale Backgrounds -->
+    <color name="bg_card_light">#FFFFFF</color>
+    <color name="bg_button_light">#000000</color>
+    <color name="text_button_light">#FFFFFF</color>
+</resources>

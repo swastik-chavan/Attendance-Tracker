@@ -1,0 +1,188 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.AttendanceTracker" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorOnPrimary">@color/on_primary</item>
+        <item name="android:windowBackground">@color/background</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorOnSurface">@color/on_surface</item>
+        <item name="colorOutline">@color/outline</item>
+
+        <!-- Status bar and Navigation bar -->
+        <item name="android:statusBarColor">@color/surface</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+
+        <!-- Brutalist Styles -->
+        <item name="materialCardViewStyle">@style/BrutalistCard</item>
+        <item name="materialButtonStyle">@style/BrutalistButton</item>
+        <item name="textInputStyle">@style/BrutalistInput</item>
+        <item name="floatingActionButtonStyle">@style/BrutalistFAB</item>
+        <item name="bottomNavigationStyle">@style/BrutalistBottomNav</item>
+        <item name="alertDialogTheme">@style/BrutalistAlertDialog</item>
+
+        <!-- Default UI Scale Attributes -->
+        <item name="brutalistSpacingSmall">@dimen/default_spacing_small</item>
+        <item name="brutalistSpacingMedium">@dimen/default_spacing_medium</item>
+        <item name="brutalistSpacingLarge">@dimen/default_spacing_large</item>
+        <item name="brutalistCardPadding">@dimen/default_card_padding</item>
+        <item name="brutalistTitleSize">@dimen/default_title_size</item>
+        <item name="brutalistHeadingSize">@dimen/default_heading_size</item>
+        <item name="brutalistBodySize">@dimen/default_body_size</item>
+        <item name="brutalistButtonHeight">@dimen/default_button_height</item>
+        <item name="brutalistInputHeight">@dimen/default_input_height</item>
+        <item name="brutalistStrokeWidth">@dimen/default_stroke_width</item>
+        <item name="brutalistIconSize">@dimen/default_icon_size</item>
+    </style>
+
+    <!-- UI Scale Theme Variants -->
+    <style name="Theme.AttendanceTracker.Compact" parent="Theme.AttendanceTracker">
+        <item name="brutalistSpacingSmall">@dimen/compact_spacing_small</item>
+        <item name="brutalistSpacingMedium">@dimen/compact_spacing_medium</item>
+        <item name="brutalistSpacingLarge">@dimen/compact_spacing_large</item>
+        <item name="brutalistCardPadding">@dimen/compact_card_padding</item>
+        <item name="brutalistTitleSize">@dimen/compact_title_size</item>
+        <item name="brutalistHeadingSize">@dimen/compact_heading_size</item>
+        <item name="brutalistBodySize">@dimen/compact_body_size</item>
+        <item name="brutalistButtonHeight">@dimen/compact_button_height</item>
+        <item name="brutalistInputHeight">@dimen/compact_input_height</item>
+        <item name="brutalistStrokeWidth">@dimen/compact_stroke_width</item>
+        <item name="brutalistIconSize">@dimen/compact_icon_size</item>
+    </style>
+
+    <style name="Theme.AttendanceTracker.Comfortable" parent="Theme.AttendanceTracker">
+        <item name="brutalistSpacingSmall">@dimen/comfortable_spacing_small</item>
+        <item name="brutalistSpacingMedium">@dimen/comfortable_spacing_medium</item>
+        <item name="brutalistSpacingLarge">@dimen/comfortable_spacing_large</item>
+        <item name="brutalistCardPadding">@dimen/comfortable_card_padding</item>
+        <item name="brutalistTitleSize">@dimen/comfortable_title_size</item>
+        <item name="brutalistHeadingSize">@dimen/comfortable_heading_size</item>
+        <item name="brutalistBodySize">@dimen/comfortable_body_size</item>
+        <item name="brutalistButtonHeight">@dimen/comfortable_button_height</item>
+        <item name="brutalistInputHeight">@dimen/comfortable_input_height</item>
+        <item name="brutalistStrokeWidth">@dimen/comfortable_stroke_width</item>
+        <item name="brutalistIconSize">@dimen/comfortable_icon_size</item>
+    </style>
+
+    <style name="Theme.AttendanceTracker.Large" parent="Theme.AttendanceTracker">
+        <item name="brutalistSpacingSmall">@dimen/large_spacing_small</item>
+        <item name="brutalistSpacingMedium">@dimen/large_spacing_medium</item>
+        <item name="brutalistSpacingLarge">@dimen/large_spacing_large</item>
+        <item name="brutalistCardPadding">@dimen/large_card_padding</item>
+        <item name="brutalistTitleSize">@dimen/large_title_size</item>
+        <item name="brutalistHeadingSize">@dimen/large_heading_size</item>
+        <item name="brutalistBodySize">@dimen/large_body_size</item>
+        <item name="brutalistButtonHeight">@dimen/large_button_height</item>
+        <item name="brutalistInputHeight">@dimen/large_input_height</item>
+        <item name="brutalistStrokeWidth">@dimen/large_stroke_width</item>
+        <item name="brutalistIconSize">@dimen/large_icon_size</item>
+    </style>
+
+    <!-- Component Styles -->
+    <style name="BrutalistCard" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardBackgroundColor">@color/bg_white</item>
+        <item name="cardCornerRadius">0dp</item>
+        <item name="cardElevation">0dp</item>
+        <item name="strokeColor">@color/border_black</item>
+        <item name="strokeWidth">?attr/brutalistStrokeWidth</item>
+    </style>
+
+    <style name="BrutalistButton" parent="Widget.Material3.Button">
+        <item name="android:textColor">@color/selector_brutalist_button_text</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="cornerRadius">0dp</item>
+        <item name="android:minHeight">?attr/brutalistButtonHeight</item>
+        <item name="strokeColor">@color/border_black</item>
+        <item name="strokeWidth">?attr/brutalistStrokeWidth</item>
+        <item name="android:backgroundTint">@color/text_black</item>
+        <item name="rippleColor">@color/white</item>
+    </style>
+
+    <style name="BrutalistButton.Present">
+        <item name="android:backgroundTint">@color/brutalist_present</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="rippleColor">@color/white</item>
+    </style>
+
+    <style name="BrutalistButton.Absent">
+        <item name="android:backgroundTint">@color/brutalist_absent</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="rippleColor">@color/black</item>
+    </style>
+
+    <style name="BrutalistInput" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxCornerRadiusTopStart">0dp</item>
+        <item name="boxCornerRadiusTopEnd">0dp</item>
+        <item name="boxCornerRadiusBottomStart">0dp</item>
+        <item name="boxCornerRadiusBottomEnd">0dp</item>
+        <item name="boxStrokeWidth">?attr/brutalistStrokeWidth</item>
+        <item name="boxStrokeWidthFocused">?attr/brutalistStrokeWidth</item>
+        <item name="boxStrokeColor">@color/selector_brutalist_input_stroke</item>
+        <item name="hintTextColor">@color/brutalist_accent</item>
+        <item name="android:textColorHint">#666666</item>
+    </style>
+
+    <style name="BrutalistFAB" parent="Widget.Material3.FloatingActionButton.Primary">
+        <item name="backgroundTint">@color/text_black</item>
+        <item name="tint">@color/white</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.Brutalist.FAB</item>
+        <item name="elevation">4dp</item>
+        <item name="borderWidth">?attr/brutalistStrokeWidth</item>
+        <item name="android:strokeColor">@color/border_black</item>
+    </style>
+
+    <style name="ShapeAppearance.Brutalist.FAB" parent="">
+        <item name="cornerSize">0dp</item>
+    </style>
+
+    <style name="BrutalistBottomNav" parent="Widget.Material3.BottomNavigationView">
+        <item name="android:background">@drawable/bg_brutalist_bottom_nav</item>
+        <item name="itemIconTint">@color/selector_brutalist_nav</item>
+        <item name="itemTextColor">@color/selector_brutalist_nav</item>
+        <item name="itemActiveIndicatorStyle">@style/BrutalistNavIndicator</item>
+        <item name="android:outlineProvider">none</item>
+    </style>
+
+    <style name="BrutalistChip" parent="Widget.Material3.Chip.Suggestion">
+        <item name="chipCornerRadius">0dp</item>
+        <item name="chipStrokeWidth">?attr/brutalistStrokeWidth</item>
+        <item name="chipStrokeColor">@color/border_black</item>
+        <item name="chipBackgroundColor">@color/selector_brutalist_chip_bg</item>
+        <item name="android:textColor">@color/selector_brutalist_chip_text</item>
+        <item name="android:textStyle">bold</item>
+        <item name="checkedIconVisible">false</item>
+    </style>
+
+    <style name="BrutalistNavIndicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/brutalist_accent</item>
+    </style>
+
+    <style name="BrutalistAlertDialog" parent="Theme.Material3.DayNight.Dialog.Alert">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:background">@color/bg_white</item>
+        <item name="buttonBarPositiveButtonStyle">@style/BrutalistButton</item>
+        <item name="buttonBarNegativeButtonStyle">@style/BrutalistButton</item>
+    </style>
+
+    <!-- Typography Styles (Scale Dependent) -->
+    <style name="BrutalistTitle" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/text_black</item>
+        <item name="android:textSize">?attr/brutalistTitleSize</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="BrutalistHeading" parent="TextAppearance.Material3.HeadlineSmall">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/text_black</item>
+        <item name="android:textSize">?attr/brutalistHeadingSize</item>
+    </style>
+
+    <style name="BrutalistBody" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:textColor">@color/text_black</item>
+        <item name="android:textSize">?attr/brutalistBodySize</item>
+    </style>
+
+</resources>

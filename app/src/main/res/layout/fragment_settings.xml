@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="?attr/brutalistSpacingMedium">
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_title"
+            style="@style/BrutalistTitle"
+            android:layout_marginBottom="?attr/brutalistSpacingLarge" />
+
+        <!-- UI SCALE Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="?attr/brutalistCardPadding"
+            android:background="@drawable/bg_brutalist_card"
+            android:layout_marginBottom="?attr/brutalistSpacingMedium">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="UI SCALE / DENSITY"
+                style="@style/BrutalistHeading"
+                android:layout_marginBottom="?attr/brutalistSpacingSmall" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chip_group_scale"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:singleSelection="true"
+                app:selectionRequired="true">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_scale_compact"
+                    style="@style/BrutalistChip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="COMPACT"
+                    android:checkable="true" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_scale_default"
+                    style="@style/BrutalistChip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DEFAULT"
+                    android:checkable="true" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_scale_comfortable"
+                    style="@style/BrutalistChip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="COZY"
+                    android:checkable="true" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_scale_large"
+                    style="@style/BrutalistChip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LARGE"
+                    android:checkable="true" />
+            </com.google.android.material.chip.ChipGroup>
+        </LinearLayout>
+
+        <!-- Theme Selection Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="?attr/brutalistCardPadding"
+            android:background="@drawable/bg_brutalist_card"
+            android:layout_marginBottom="?attr/brutalistSpacingMedium">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_theme_title"
+                style="@style/BrutalistHeading"
+                android:layout_marginBottom="?attr/brutalistSpacingSmall" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chip_group_theme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:singleSelection="true"
+                app:selectionRequired="true">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_theme_system"
+                    style="@style/BrutalistChip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_theme_system"
+                    android:checkable="true" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_theme_light"
+                    style="@style/BrutalistChip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_theme_light"
+                    android:checkable="true" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_theme_dark"
+                    style="@style/BrutalistChip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_theme_dark"
+                    android:checkable="true" />
+            </com.google.android.material.chip.ChipGroup>
+        </LinearLayout>
+
+        <!-- Target Goal Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="?attr/brutalistCardPadding"
+            android:background="@drawable/bg_brutalist_card"
+            android:layout_marginBottom="?attr/brutalistSpacingMedium">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_goal_title"
+                style="@style/BrutalistHeading" />
+
+            <TextView
+                android:id="@+id/tv_goal_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="75%"
+                style="@style/BrutalistTitle"
+                android:layout_marginTop="?attr/brutalistSpacingSmall" />
+
+            <com.google.android.material.slider.Slider
+                android:id="@+id/slider_target_goal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:value="75"
+                android:valueFrom="50"
+                android:valueTo="100"
+                android:stepSize="1"
+                app:thumbColor="@color/brutalist_accent"
+                app:trackColorActive="@color/brutalist_accent" />
+        </LinearLayout>
+
+        <!-- Backup & Restore Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="?attr/brutalistSpacingMedium">
+
+            <Button
+                android:id="@+id/btn_export"
+                style="@style/BrutalistButton"
+                android:layout_width="0dp"
+                android:layout_height="?attr/brutalistButtonHeight"
+                android:layout_weight="1"
+                android:text="EXPORT"
+                android:layout_marginEnd="?attr/brutalistSpacingSmall" />
+
+            <Button
+                android:id="@+id/btn_import"
+                style="@style/BrutalistButton"
+                android:layout_width="0dp"
+                android:layout_height="?attr/brutalistButtonHeight"
+                android:layout_weight="1"
+                android:text="IMPORT" />
+        </LinearLayout>
+
+        <!-- Reset App -->
+        <Button
+            android:id="@+id/btn_reset_app"
+            style="@style/BrutalistButton"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/brutalistButtonHeight"
+            android:text="@string/settings_reset"
+            android:backgroundTint="@color/brutalist_absent"
+            android:layout_marginBottom="?attr/brutalistSpacingMedium" />
+
+        <!-- About Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="?attr/brutalistCardPadding"
+            android:background="@drawable/bg_brutalist_card"
+            android:layout_marginBottom="?attr/brutalistSpacingLarge">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_about_title"
+                style="@style/BrutalistHeading"
+                android:layout_marginBottom="?attr/brutalistSpacingSmall" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_version"
+                style="@style/BrutalistBody"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

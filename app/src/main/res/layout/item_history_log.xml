@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="4dp"
+    style="@style/BrutalistCard">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="?attr/brutalistCardPadding">
+
+        <!-- Subject Name -->
+        <TextView
+            android:id="@+id/tv_history_subject_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            style="@style/BrutalistHeading"
+            android:textSize="14sp"
+            android:textAllCaps="true"
+            app:layout_constraintEnd_toStartOf="@id/tv_history_status"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="MATHEMATICS" />
+
+        <!-- Timestamp -->
+        <TextView
+            android:id="@+id/tv_history_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/BrutalistBody"
+            android:textStyle="bold"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toStartOf="@id/tv_history_status"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_history_subject_name"
+            tools:text="JULY 18, 2026 - 10:45 AM" />
+
+        <!-- Status Badge -->
+        <TextView
+            android:id="@+id/tv_history_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="4dp"
+            android:text="PRESENT"
+            style="@style/BrutalistBody"
+            android:textStyle="bold"
+            android:textSize="10sp"
+            android:background="@drawable/bg_badge_present"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btn_delete_log"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Delete button -->
+        <ImageButton
+            android:id="@+id/btn_delete_log"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@drawable/bg_brutalist_button"
+            android:src="@drawable/ic_delete"
+            app:tint="@color/white"
+            android:contentDescription="Delete entry"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

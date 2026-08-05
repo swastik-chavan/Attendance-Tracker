@@ -1,0 +1,35 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Dark Brutalist application theme. -->
+    <style name="Theme.AttendanceTracker" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorOnPrimary">@color/on_primary</item>
+        <item name="android:windowBackground">@color/background</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorOnSurface">@color/on_surface</item>
+        <item name="colorOutline">@color/outline</item>
+
+        <!-- Status bar and Navigation bar -->
+        <item name="android:statusBarColor">@color/surface</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+
+        <!-- Brutalist Styles -->
+        <item name="materialCardViewStyle">@style/BrutalistCard</item>
+        <item name="materialButtonStyle">@style/BrutalistButton</item>
+        <item name="textInputStyle">@style/BrutalistInput</item>
+        <item name="floatingActionButtonStyle">@style/BrutalistFAB</item>
+        <item name="bottomNavigationStyle">@style/BrutalistBottomNav</item>
+        <item name="alertDialogTheme">@style/BrutalistAlertDialog</item>
+
+        <!-- Default UI Scale Attributes -->
+        <item name="brutalistSpacingSmall">@dimen/default_spacing_small</item>
+        <item name="brutalistSpacingMedium">@dimen/default_spacing_medium</item>
+        <item name="brutalistSpacingLarge">@dimen/default_spacing_large</item>
+        <item name="brutalistCardPadding">@dimen/default_card_padding</item>
+        <item name="brutalistTitleSize">@dimen/default_title_size</item>
+        <item name="brutalistHeadingSize">@dimen/default_heading_size</item>
+        <item name="brutalistBodySize">@dimen/default_body_size</item>
+        <item name="brutalistButtonHeight">@dimen/default_button_height</item>
+        <item name="brutalistInputHeight">@dimen/default_input_height</item>
+        <item name="brutalistStrokeWidth">@dimen/default_stroke_width</item>
+    </style>
+</resources>

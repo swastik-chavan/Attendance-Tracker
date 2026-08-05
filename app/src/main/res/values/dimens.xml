@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Spacing System -->
+    <dimen name="spacing_4">4dp</dimen>
+    <dimen name="spacing_8">8dp</dimen>
+    <dimen name="spacing_12">12dp</dimen>
+    <dimen name="spacing_16">16dp</dimen>
+    <dimen name="spacing_20">20dp</dimen>
+    <dimen name="spacing_24">24dp</dimen>
+    <dimen name="spacing_32">32dp</dimen>
+
+    <!-- UI Scale: Default Values -->
+    <dimen name="default_spacing_small">8dp</dimen>
+    <dimen name="default_spacing_medium">12dp</dimen>
+    <dimen name="default_spacing_large">20dp</dimen>
+    <dimen name="default_card_padding">16dp</dimen>
+    <dimen name="default_title_size">24sp</dimen>
+    <dimen name="default_heading_size">18sp</dimen>
+    <dimen name="default_body_size">14sp</dimen>
+    <dimen name="default_button_height">52dp</dimen>
+    <dimen name="default_input_height">56dp</dimen>
+    <dimen name="default_stroke_width">2.5dp</dimen>
+    <dimen name="default_icon_size">24dp</dimen>
+
+    <!-- UI Scale: Compact -->
+    <dimen name="compact_spacing_small">6dp</dimen>
+    <dimen name="compact_spacing_medium">8dp</dimen>
+    <dimen name="compact_spacing_large">16dp</dimen>
+    <dimen name="compact_card_padding">12dp</dimen>
+    <dimen name="compact_title_size">20sp</dimen>
+    <dimen name="compact_heading_size">16sp</dimen>
+    <dimen name="compact_body_size">13sp</dimen>
+    <dimen name="compact_button_height">44dp</dimen>
+    <dimen name="compact_input_height">48dp</dimen>
+    <dimen name="compact_stroke_width">2dp</dimen>
+    <dimen name="compact_icon_size">20dp</dimen>
+
+    <!-- UI Scale: Comfortable -->
+    <dimen name="comfortable_spacing_small">10dp</dimen>
+    <dimen name="comfortable_spacing_medium">16dp</dimen>
+    <dimen name="comfortable_spacing_large">24dp</dimen>
+    <dimen name="comfortable_card_padding">20dp</dimen>
+    <dimen name="comfortable_title_size">28sp</dimen>
+    <dimen name="comfortable_heading_size">22sp</dimen>
+    <dimen name="comfortable_body_size">16sp</dimen>
+    <dimen name="comfortable_button_height">60dp</dimen>
+    <dimen name="comfortable_input_height">64dp</dimen>
+    <dimen name="comfortable_stroke_width">3dp</dimen>
+    <dimen name="comfortable_icon_size">28dp</dimen>
+
+    <!-- UI Scale: Large -->
+    <dimen name="large_spacing_small">12dp</dimen>
+    <dimen name="large_spacing_medium">20dp</dimen>
+    <dimen name="large_spacing_large">32dp</dimen>
+    <dimen name="large_card_padding">24dp</dimen>
+    <dimen name="large_title_size">32sp</dimen>
+    <dimen name="large_heading_size">26sp</dimen>
+    <dimen name="large_body_size">18sp</dimen>
+    <dimen name="large_button_height">68dp</dimen>
+    <dimen name="large_input_height">72dp</dimen>
+    <dimen name="large_stroke_width">4dp</dimen>
+    <dimen name="large_icon_size">32dp</dimen>
+</resources>

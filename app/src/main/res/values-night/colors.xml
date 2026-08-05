@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Brutalist Core Palette - Dark Mode -->
+    <color name="bg_white">#000000</color>
+    <color name="bg_off_white">#121212</color>
+    <color name="text_black">#FFFFFF</color>
+    <color name="border_black">#FFFFFF</color>
+    <color name="border_grey">#333333</color>
+
+    <!-- Theme Overrides for Dark Mode -->
+    <color name="primary">#FFFFFF</color>
+    <color name="on_primary">#000000</color>
+    <color name="primary_container">#000000</color>
+    <color name="background">@color/bg_off_white</color>
+    <color name="surface">@color/bg_white</color>
+    <color name="on_surface">@color/text_black</color>
+    <color name="outline">@color/border_black</color>
+</resources>

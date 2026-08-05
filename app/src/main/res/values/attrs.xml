@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="brutalistSpacingSmall" format="dimension" />
+    <attr name="brutalistSpacingMedium" format="dimension" />
+    <attr name="brutalistSpacingLarge" format="dimension" />
+    <attr name="brutalistCardPadding" format="dimension" />
+    <attr name="brutalistTitleSize" format="dimension" />
+    <attr name="brutalistHeadingSize" format="dimension" />
+    <attr name="brutalistBodySize" format="dimension" />
+    <attr name="brutalistButtonHeight" format="dimension" />
+    <attr name="brutalistInputHeight" format="dimension" />
+    <attr name="brutalistStrokeWidth" format="dimension" />
+    <attr name="brutalistIconSize" format="dimension" />
+</resources>

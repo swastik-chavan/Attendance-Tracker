@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="?attr/brutalistSpacingMedium"
+        android:background="@drawable/bg_brutalist_card">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tv_dialog_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/add_subject_title"
+            style="@style/BrutalistHeading"
+            android:layout_marginBottom="?attr/brutalistSpacingMedium" />
+
+        <!-- Subject Name Input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_subject_name"
+            style="@style/BrutalistInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:hint="@string/subject_name_label"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_subject_name"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/brutalistInputHeight"
+                android:inputType="textCapWords"
+                android:maxLines="1"
+                android:maxLength="50"
+                style="@style/BrutalistBody"
+                android:textStyle="bold" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Teacher Name Input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_teacher_name"
+            style="@style/BrutalistInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:hint="@string/teacher_name_label">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_teacher_name"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/brutalistInputHeight"
+                android:inputType="textCapWords"
+                android:maxLines="1"
+                style="@style/BrutalistBody"
+                android:textStyle="bold" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Color Selection Title -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PICK A SYSTEM COLOR"
+            style="@style/BrutalistBody"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Color List Selector -->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            android:layout_marginBottom="24dp">
+
+            <LinearLayout
+                android:id="@+id/layout_color_palette"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <FrameLayout android:id="@+id/color_option_0" android:layout_width="40dp" android:layout_height="40dp" android:layout_marginEnd="8dp" android:background="@drawable/bg_square"><View android:id="@+id/color_view_0" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="3dp"/><ImageView android:id="@+id/color_check_0" android:layout_width="20dp" android:layout_height="20dp" android:layout_gravity="center" android:src="@drawable/ic_present" app:tint="@color/text_black" android:visibility="gone"/></FrameLayout>
+                <FrameLayout android:id="@+id/color_option_1" android:layout_width="40dp" android:layout_height="40dp" android:layout_marginEnd="8dp" android:background="@drawable/bg_square"><View android:id="@+id/color_view_1" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="3dp"/><ImageView android:id="@+id/color_check_1" android:layout_width="20dp" android:layout_height="20dp" android:layout_gravity="center" android:src="@drawable/ic_present" app:tint="@color/text_black" android:visibility="gone"/></FrameLayout>
+                <FrameLayout android:id="@+id/color_option_2" android:layout_width="40dp" android:layout_height="40dp" android:layout_marginEnd="8dp" android:background="@drawable/bg_square"><View android:id="@+id/color_view_2" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="3dp"/><ImageView android:id="@+id/color_check_2" android:layout_width="20dp" android:layout_height="20dp" android:layout_gravity="center" android:src="@drawable/ic_present" app:tint="@color/text_black" android:visibility="gone"/></FrameLayout>
+                <FrameLayout android:id="@+id/color_option_3" android:layout_width="40dp" android:layout_height="40dp" android:layout_marginEnd="8dp" android:background="@drawable/bg_square"><View android:id="@+id/color_view_3" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="3dp"/><ImageView android:id="@+id/color_check_3" android:layout_width="20dp" android:layout_height="20dp" android:layout_gravity="center" android:src="@drawable/ic_present" app:tint="@color/text_black" android:visibility="gone"/></FrameLayout>
+                <FrameLayout android:id="@+id/color_option_4" android:layout_width="40dp" android:layout_height="40dp" android:layout_marginEnd="8dp" android:background="@drawable/bg_square"><View android:id="@+id/color_view_4" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="3dp"/><ImageView android:id="@+id/color_check_4" android:layout_width="20dp" android:layout_height="20dp" android:layout_gravity="center" android:src="@drawable/ic_present" app:tint="@color/text_black" android:visibility="gone"/></FrameLayout>
+                <FrameLayout android:id="@+id/color_option_5" android:layout_width="40dp" android:layout_height="40dp" android:layout_marginEnd="8dp" android:background="@drawable/bg_square"><View android:id="@+id/color_view_5" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="3dp"/><ImageView android:id="@+id/color_check_5" android:layout_width="20dp" android:layout_height="20dp" android:layout_gravity="center" android:src="@drawable/ic_present" app:tint="@color/text_black" android:visibility="gone"/></FrameLayout>
+                <FrameLayout android:id="@+id/color_option_6" android:layout_width="40dp" android:layout_height="40dp" android:layout_marginEnd="8dp" android:background="@drawable/bg_square"><View android:id="@+id/color_view_6" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="3dp"/><ImageView android:id="@+id/color_check_6" android:layout_width="20dp" android:layout_height="20dp" android:layout_gravity="center" android:src="@drawable/ic_present" app:tint="@color/text_black" android:visibility="gone"/></FrameLayout>
+                <FrameLayout android:id="@+id/color_option_7" android:layout_width="40dp" android:layout_height="40dp" android:background="@drawable/bg_square"><View android:id="@+id/color_view_7" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="3dp"/><ImageView android:id="@+id/color_check_7" android:layout_width="20dp" android:layout_height="20dp" android:layout_gravity="center" android:src="@drawable/ic_present" app:tint="@color/text_black" android:visibility="gone"/></FrameLayout>
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <!-- Actions -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_cancel_dialog"
+                style="@style/BrutalistButton"
+                android:layout_width="0dp"
+                android:layout_height="?attr/brutalistButtonHeight"
+                android:layout_weight="1"
+                android:text="@string/btn_cancel"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="@color/bg_off_white"
+                android:textColor="@color/text_black"
+                app:rippleColor="@color/brutalist_accent" />
+
+            <Button
+                android:id="@+id/btn_save_dialog"
+                style="@style/BrutalistButton"
+                android:layout_width="0dp"
+                android:layout_height="?attr/brutalistButtonHeight"
+                android:layout_weight="1"
+                android:text="@string/btn_save" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

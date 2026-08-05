@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="?attr/brutalistSpacingMedium"
+        android:paddingTop="?attr/brutalistSpacingMedium">
+
+        <!-- Top Header Area -->
+        <TextView
+            android:id="@+id/tv_greeting"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/greeting_day"
+            style="@style/BrutalistTitle"
+            app:layout_constraintEnd_toStartOf="@id/btn_history"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/btn_history"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_brutalist_button"
+            android:src="@drawable/ic_history"
+            android:contentDescription="@string/nav_history"
+            app:tint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Search Area -->
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/brutalistInputHeight"
+            android:layout_marginTop="?attr/brutalistSpacingSmall"
+            android:background="@drawable/bg_brutalist_input"
+            android:drawableStart="@drawable/ic_search"
+            android:drawablePadding="8dp"
+            android:hint="@string/search_hint"
+            android:inputType="text"
+            android:paddingHorizontal="12dp"
+            android:textSize="?attr/brutalistBodySize"
+            android:textStyle="bold"
+            android:textColor="@color/text_black"
+            android:textColorHint="#999999"
+            android:drawableTint="@color/text_black"
+            app:layout_constraintTop_toBottomOf="@id/tv_greeting"
+            android:importantForAutofill="no" />
+
+        <!-- Overall Statistics Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_overall_stats"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?attr/brutalistSpacingSmall"
+            style="@style/BrutalistCard"
+            app:layout_constraintTop_toBottomOf="@id/et_search">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="?attr/brutalistCardPadding">
+
+                <TextView
+                    android:id="@+id/tv_overall_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/overall_attendance_label"
+                    style="@style/BrutalistHeading"
+                    android:textAllCaps="true"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_overall_percentage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.0%"
+                    android:textSize="36sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_black"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_overall_title" />
+
+                <TextView
+                    android:id="@+id/tv_overall_classes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0 / 0 Classes"
+                    style="@style/BrutalistBody"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_overall_percentage"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <!-- Brutalist Progress Bar -->
+                <FrameLayout
+                    android:id="@+id/progress_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_brutalist_card"
+                    app:layout_constraintTop_toBottomOf="@id/tv_overall_percentage">
+
+                    <View
+                        android:id="@+id/view_progress_fill"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/brutalist_accent" />
+                </FrameLayout>
+
+                <com.google.android.material.progressindicator.LinearProgressIndicator
+                    android:id="@+id/progress_overall"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@id/progress_container" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Subjects List Header -->
+        <TextView
+            android:id="@+id/tv_list_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?attr/brutalistSpacingMedium"
+            android:text="SUBJECTS"
+            style="@style/BrutalistHeading"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/card_overall_stats"/>
+
+        <!-- RecyclerView -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_subjects"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:clipToPadding="false"
+            android:paddingBottom="80dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_list_header"
+            tools:listitem="@layout/item_subject_card" />
+
+        <!-- Empty State View -->
+        <LinearLayout
+            android:id="@+id/layout_empty_state"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:visibility="gone"
+            android:padding="24dp"
+            android:background="@drawable/bg_brutalist_card"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_list_header">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NO SUBJECTS"
+                style="@style/BrutalistHeading"
+                android:textAlignment="center" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- FAB for adding subjects -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_add_subject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="20dp"
+        android:src="@drawable/ic_add"
+        style="@style/BrutalistFAB" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
